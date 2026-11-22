@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Denis Morozov — Product Engineer. Проектирование цифровых продуктов на стыке haute-couture эстетики, 3D-моушена и инженерной архитектуры.">
+  <title>Denis Morozov — Product Engineer | Digital Atelier</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body id="top">
+
+  <!-- Luxury Preloader Curtain -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-top">
+      <span>DENIS MOROZOV // ATELIER</span>
+      <span>PRODUCT ENGINEERING &amp; 3D SYSTEMS</span>
+    </div>
+    <div class="preloader-center">
+      <div class="preloader-title">Sculpting Digital Systems</div>
+      <div class="preloader-counter" id="loader-counter">00%</div>
+      <div class="preloader-bar"><div class="preloader-fill" id="loader-fill"></div></div>
+    </div>
+    <div class="preloader-bottom">
+      <span>OBSIDIAN MARBLE EDITION</span>
+      <span>INITIALIZING WEBGL ENGINE</span>
+    </div>
+  </div>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Procedural Marble & WebGL 3D Canvas -->
+  <div class="marble-veins-bg"></div>
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Floating Glass Header -->
+  <header class="nav-header">
+    <a class="brand-mark magnetic-target" href="index.html" data-cursor="HOME">
+      <span class="brand-monogram">M</span>
+      <span>MOROZOV</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#work" data-cursor="CASES">Избранные кейсы</a>
+      <a href="#lab" data-cursor="LAB">3D &amp; Token Lab</a>
+      <a href="#architecture" data-cursor="METHOD">Инженерия</a>
+      <a href="#about" data-cursor="PROFILE">О себе</a>
+    </nav>
+    <div class="nav-cta-group">
+      <div class="status-pill"><span class="status-dot"></span>Available for Roles</div>
+      <a class="btn-luxury magnetic-btn" href="mailto:mazzask@proton.me" data-cursor="MAIL">Связаться ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO STAGE -->
+    <section class="wrap hero-stage">
+      <div>
+        <div class="hero-kicker">Product Engineer · Design Systems · Spatial Motion</div>
+        <h1 class="hero-headline">
+          <span class="line-mask"><span class="line-inner">Engineering</span></span>
+          <span class="line-mask"><span class="line-inner"><span class="italic-gold">sculptural</span> digital</span></span>
+          <span class="line-mask"><span class="line-inner">products.</span></span>
+        </h1>
+      </div>
+
+      <div class="hero-grid-bottom">
+        <div>
+          <p class="hero-manifesto">
+            Я — <strong>Денис Морозов, Product Engineer</strong>. Объединяю ювелирную точность интерфейсного дизайна, живой 3D-моушен и фронтенд-архитектуру. Проектирую сложные цифровые экосистемы так, чтобы каждый пиксель, переход и сценарий ощущались монолитно и дорого.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-luxury magnetic-btn" href="#work" data-cursor="EXPLORE">Исследовать кейсы ↓</a>
+            <a class="btn-ghost magnetic-btn" href="#lab" data-cursor="PLAY">Интерактивная лаборатория ✦</a>
+          </div>
+        </div>
+
+        <div class="hero-telemetry">
+          <div class="telemetry-item">
+            <small>DISCIPLINE</small>
+            <span>Product Engineer</span>
+          </div>
+          <div class="telemetry-item">
+            <small>SYSTEMS BUILT</small>
+            <span>21+ UI Libraries</span>
+          </div>
+          <div class="telemetry-item">
+            <small>UX EFFICIENCY</small>
+            <span>−42% User Steps</span>
+          </div>
+          <div class="telemetry-item">
+            <small>CORE STACK</small>
+            <span>Figma · WebGL · Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KINETIC LUXURY RIBBON -->
+    <div class="kinetic-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Product Engineering <span class="diamond">✦</span></span>
+        <span class="marquee-item">Spatial 3D &amp; Kinetic Motion <span class="diamond">✦</span></span>
+        <span class="marquee-item">Atomic Design Systems <span class="diamond">✦</span></span>
+        <span class="marquee-item">Fintech &amp; Healthcare Architecture <span class="diamond">✦</span></span>
+        <span class="marquee-item">Interactive Prototyping <span class="diamond">✦</span></span>
+        <span class="marquee-item">Product Engineering <span class="diamond">✦</span></span>
+        <span class="marquee-item">Spatial 3D &amp; Kinetic Motion <span class="diamond">✦</span></span>
+        <span class="marquee-item">Atomic Design Systems <span class="diamond">✦</span></span>
+        <span class="marquee-item">Fintech &amp; Healthcare Architecture <span class="diamond">✦</span></span>
+        <span class="marquee-item">Interactive Prototyping <span class="diamond">✦</span></span>
+      </div>
+    </div>
+
+    <!-- SELECTED WORKS — 3D TILT MONOLITHS -->
+    <section class="wrap atelier-section" id="work">
+      <div class="section-header-editorial reveal-up">
+        <div>
+          <span class="eyebrow-tag">01 / CURATED MONOGRAPHS</span>
+          <h2 class="section-title-serif">Избранные <em>кейсы</em></h2>
+        </div>
+        <p class="section-lead-right">
+          Три продуктовых исследования, где глубокая переработка пользовательских сценариев и дизайн-систем превращает сложные сервисы в интуитивный инструмент.
+        </p>
+      </div>
+
+      <div class="cases-showcase">
+        <!-- CASE 01: SWOP -->
+        <article class="case-monolith featured tilt-card reveal-up" data-cursor="OPEN CASE">
+          <div class="card-glare"></div>
+          <a href="case-swop.html" class="case-viewport vp-swop">
+            <div class="vp-top">
+              <span>SWOP // FINTECH ENGINE</span>
+              <span>ATOMIC DS · 21 GROUPS</span>
+            </div>
+            <div class="vp-widget-glass">
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:#9eb5a1;margin-bottom:12px;">
+                <span>INSTANT LIQUIDITY ROUTER</span>
+                <span style="color:#c2f477;">● 0.04s LATENCY</span>
+              </div>
+              <div class="vp-row">
+                <span style="color:#b8c7b9;">Отправляете</span>
+                <strong style="font-size:18px;color:#fff;">1.00 BTC</strong>
+              </div>
+              <div style="text-align:center;color:#c2f477;margin:6px 0;font-size:12px;">↓ 1 BTC = 84 250 USDT</div>
+              <div class="vp-row">
+                <span style="color:#b8c7b9;">Получаете</span>
+                <strong style="font-size:18px;color:#c2f477;">84 250 USDT</strong>
+              </div>
+              <div class="vp-accent-pill">ИНИЦИИРОВАТЬ ОБМЕН (4 ШАГА) ↗</div>
+            </div>
+            <div class="vp-top">
+              <span>FLOW OPTIMIZATION: 7 → 4 STEPS</span>
+              <span>USABILITY TESTED (N=7)</span>
+            </div>
+          </a>
+
+          <div class="case-details">
+            <div class="case-meta-line">
+              <span>CASE 01 // METALAMP</span>
+              <span>2025 — PRESENT</span>
+            </div>
+            <h3 class="case-title">SWOP — Криптовалютный обменный сервис</h3>
+            <p class="case-desc">
+              Реинжиниринг критического пути обмена с 7 до 4 шагов, проектирование отказоустойчивых состояний транзакций и создание масштабируемой дизайн-системы на базе Atomic Design для 8 продуктовых потоков.
+            </p>
+            <div class="case-tags">
+              <span class="case-tag">Product Engineering</span>
+              <span class="case-tag">Design System (21 groups)</span>
+              <span class="case-tag">Fintech UX</span>
+              <span class="case-tag">Usability Testing</span>
+            </div>
+            <a class="btn-luxury magnetic-btn" href="case-swop.html">Открыть монографию кейса ↗</a>
+          </div>
+        </article>
+
+        <!-- CASE 02: CLINIA -->
+        <article class="case-monolith tilt-card reveal-up" data-cursor="OPEN CASE">
+          <div class="card-glare"></div>
+          <a href="case-clinia.html" class="case-viewport vp-clinia">
+            <div class="vp-top">
+              <b>CLINIA +</b>
+              <span>HEALTHCARE MOBILE</span>
+            </div>
+            <div style="margin:20px 0;">
+              <div style="font-family:var(--font-serif);font-size:34px;line-height:1.02;margin-bottom:14px;">
+                Ваше здоровье.<br><i>Без лишних шагов.</i>
+              </div>
+              <div style="background:#fff;padding:14px;border-radius:14px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 12px 30px rgba(23,46,37,0.1);">
+                <div>
+                  <strong style="display:block;font-size:13px;">Д-р Анна Смирнова</strong>
+                  <span style="font-size:11px;color:#5a6e63;">Терапевт · Слоты: 10:30 / 14:30</span>
+                </div>
+                <span style="background:#264b3b;color:#fff;padding:6px 10px;border-radius:8px;font-size:11px;">4.9 ★</span>
+              </div>
+            </div>
+            <div class="vp-top">
+              <span>USER JOURNEY: 12 → 7 STEPS</span>
+              <span>PURRWEB</span>
+            </div>
+          </a>
+
+          <div class="case-details">
+            <div class="case-meta-line">
+              <span>CASE 02 // PURRWEB</span>
+              <span>2023 — 2025</span>
+            </div>
+            <h3 class="case-title">Clinia — Мобильная экосистема записи к врачу</h3>
+            <p class="case-desc">
+              Сжатие многоэтапного сценария записи с 12 до 7 шагов за счёт объединения выбора специалиста, расписания и сохранения контекста на едином экране принятия решения.
+            </p>
+            <div class="case-tags">
+              <span class="case-tag">Healthcare UX</span>
+              <span class="case-tag">Journey Compression</span>
+              <span class="case-tag">Mobile Architecture</span>
+            </div>
+            <a class="btn-ghost magnetic-btn" href="case-clinia.html">Изучить кейс ↗</a>
+          </div>
+        </article>
+
+        <!-- CASE 03: PERCHATKA -->
+        <article class="case-monolith tilt-card reveal-up" data-cursor="OPEN CASE">
+          <div class="card-glare"></div>
+          <a href="case-perchatka.html" class="case-viewport vp-perchatka">
+            <div class="vp-top">
+              <b>ПЕРЧАТКА ®</b>
+              <span>EMPLOYEE PORTAL</span>
+            </div>
+            <div style="margin:20px 0;">
+              <div style="font-family:var(--font-serif);font-size:34px;line-height:1.02;margin-bottom:14px;">
+                Единая среда<br><i>для команды.</i>
+              </div>
+              <div style="background:#1c1b17;color:#f6f3ec;padding:16px;border-radius:14px;display:flex;justify-content:space-between;align-items:center;">
+                <div>
+                  <small style="font-family:var(--font-mono);font-size:9px;color:#d4af6a;display:block;">КОРПОРАТИВНЫЙ БАЛАНС</small>
+                  <strong style="font-size:24px;">2 450 ✦</strong>
+                </div>
+                <span style="background:#f3be52;color:#1c1b17;padding:8px 12px;border-radius:8px;font-size:11px;font-weight:700;">Магазин наград →</span>
+              </div>
+            </div>
+            <div class="vp-top">
+              <span>CHAT FLOW: 6 → 4 STEPS</span>
+              <span>NSIGN</span>
+            </div>
+          </a>
+
+          <div class="case-details">
+            <div class="case-meta-line">
+              <span>CASE 03 // NSIGN</span>
+              <span>2023</span>
+            </div>
+            <h3 class="case-title">«Перчатка» — Корпоративный портал сотрудников</h3>
+            <p class="case-desc">
+              Проектирование геймифицированной системы наград, внутреннего маркетплейса, чат-ботов и ускоренного создания групповых коммуникаций.
+            </p>
+            <div class="case-tags">
+              <span class="case-tag">Enterprise Ecosystem</span>
+              <span class="case-tag">Gamification</span>
+              <span class="case-tag">Bot Scenarios</span>
+            </div>
+            <a class="btn-ghost magnetic-btn" href="case-perchatka.html">Изучить кейс ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <p style="margin-top:32px;font-family:var(--font-mono);font-size:11px;color:var(--ink-muted);line-height:1.7;">
+        * Представленные кейсы отражают продуктовый и инженерный подход к проектированию интерфейсов и оптимизации сценариев; показатели иллюстрируют структурное сокращение шагов и охват дизайн-систем.
+      </p>
+    </section>
+
+    <!-- INTERACTIVE CARRARA MARBLE ENGINEERING LAB -->
+    <section class="wrap atelier-section" id="lab" style="padding-top:30px;">
+      <div class="engineering-lab reveal-up">
+        <div class="section-header-editorial" style="margin-bottom:42px;">
+          <div>
+            <span class="eyebrow-tag" style="color:#7d6129;">02 / INTERACTIVE SANDBOX</span>
+            <h2 class="section-title-serif" style="color:#111114;">Product Engineer <em style="color:#8c6b28;">Token Lab</em></h2>
+          </div>
+          <p class="section-lead-right" style="color:#4b4943;">
+            Настоящий Product Engineer мыслит не статичными картинками, а параметрическими системами. Поуправляйте физикой поверхности, преломлением стекла и геометрией компонента в реальном времени.
+          </p>
+        </div>
+
+        <div class="lab-grid">
+          <div class="lab-controls">
+            <div class="control-group">
+              <div class="control-header">
+                <span>Corner Geometry (Border-Radius)</span>
+                <strong id="val-radius">20px</strong>
+              </div>
+              <input type="range" class="luxury-slider" id="sim-radius" min="0" max="42" value="20">
+            </div>
+
+            <div class="control-group">
+              <div class="control-header">
+                <span>Optical Glass Refraction (Backdrop Blur)</span>
+                <strong id="val-blur">14px</strong>
+              </div>
+              <input type="range" class="luxury-slider" id="sim-blur" min="0" max="32" value="14">
+            </div>
+
+            <div class="control-group">
+              <div class="control-header">
+                <span>Spatial Z-Elevation &amp; Glow</span>
+                <strong id="val-elevation">16dp</strong>
+              </div>
+              <input type="range" class="luxury-slider" id="sim-elevation" min="0" max="36" value="16">
+            </div>
+          </div>
+
+          <div class="lab-stage-preview">
+            <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10px;color:var(--gold-champagne);letter-spacing:0.14em;">
+              <span>LIVE COMPONENT INSPECTOR</span>
+              <span>60 FPS HARDWARE ACCELERATED</span>
+            </div>
+
+            <div class="live-token-card" id="live-token-card">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+                <span style="font-family:var(--font-mono);font-size:10px;color:var(--gold-bright);">MOROZOV.UI // PRIMITIVE_01</span>
+                <span style="width:10px;height:10px;border-radius:50%;background:var(--emerald-cyber);box-shadow:0 0 12px var(--emerald-cyber);"></span>
+              </div>
+              <div style="font-family:var(--font-serif);font-size:30px;line-height:1.1;margin-bottom:8px;">
+                Parametric Luxury Surface
+              </div>
+              <p style="font-size:13px;color:var(--ink-muted);">
+                Динамический токен интерфейса, автоматически транслируемый из дизайн-системы в production-код.
+              </p>
+            </div>
+
+            <div class="token-code-readout" id="token-code-readout"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGINEERING METHODOLOGY & PROFILE BENTO -->
+    <section class="wrap atelier-section" id="architecture">
+      <div class="section-header-editorial reveal-up">
+        <div>
+          <span class="eyebrow-tag">03 / METHODOLOGY &amp; DNA</span>
+          <h2 class="section-title-serif">Архитектура <em>продукта</em></h2>
+        </div>
+        <p class="section-lead-right">
+          Соединяю системную инженерию, глубокую аналитику пользовательского пути и высокую визуальную культуру.
+        </p>
+      </div>
+
+      <div class="bento-matrix">
+        <article class="bento-tile span-7 reveal-up" id="about">
+          <span class="bento-num">01 // PRODUCT ENGINEER PROFILE</span>
+          <h3>Дизайн, подкреплённый системной инженерией</h3>
+          <p>
+            Базовое техническое образование по направлению «Информационные системы и программирование» и 3 года опыта в IT на позиции системного администратора сформировали инженерный взгляд на продукт. Я проектирую интерфейсы с полным пониманием архитектуры данных, состояний сети, производительности рендеринга и логики фронтенда.
+          </p>
+          <p style="margin-top:14px;">
+            Владею моушеном, цветокоррекцией и визуальным продакшеном (DaVinci Resolve, Premiere Pro, Lightroom), а также интегрирую AI-пайплайны для ускорения прототипирования и генерации концепций.
+          </p>
+          <div class="skill-pills">
+            <span class="skill-pill">Product Engineering</span>
+            <span class="skill-pill">Design Systems</span>
+            <span class="skill-pill">Figma Variables &amp; Tokens</span>
+            <span class="skill-pill">Interactive Motion</span>
+            <span class="skill-pill">HTML / CSS / JS / WebGL</span>
+            <span class="skill-pill">DaVinci Resolve</span>
+            <span class="skill-pill">AI Workflows</span>
+          </div>
+        </article>
+
+        <article class="bento-tile span-5 reveal-up">
+          <span class="bento-num">02 // SYSTEMIC PRINCIPLES</span>
+          <h3>Инженерные аксиомы</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:18px;font-size:14px;color:#d6d0c4;">
+            <li style="padding-left:18px;border-left:1px solid var(--gold-champagne);">Сокращать когнитивную сложность и количество шагов до целевого действия.</li>
+            <li style="padding-left:18px;border-left:1px solid var(--gold-champagne);">Проектировать все краевые состояния: ошибки, задержки сети, пустые экраны.</li>
+            <li style="padding-left:18px;border-left:1px solid var(--gold-champagne);">Строить компонентные библиотеки как живой код, а не набор разрозненных фреймов.</li>
+            <li style="padding-left:18px;border-left:1px solid var(--gold-champagne);">Использовать моушен и 3D для ориентации в пространстве, а не ради декора.</li>
+          </ul>
+        </article>
+
+        <article class="bento-tile span-4 reveal-up">
+          <span class="bento-num">STAGE 01</span>
+          <h3>Декомпозиция</h3>
+          <p>Анализ бизнес-целей, технической архитектуры, ограничений платформы и узких мест текущего CJM.</p>
+        </article>
+
+        <article class="bento-tile span-4 reveal-up">
+          <span class="bento-num">STAGE 02</span>
+          <h3>Прототипирование</h3>
+          <p>Сборка интерактивных сценариев, проверка гипотез на пользователях и оптимизация критического пути.</p>
+        </article>
+
+        <article class="bento-tile span-4 reveal-up">
+          <span class="bento-num">STAGE 03</span>
+          <h3>Системный релиз</h3>
+          <p>Токенизация UI-кита, хореография микроанимаций, спецификация состояний и сопровождение разработки.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURY EDITORIAL FOOTER -->
+  <footer class="wrap luxury-footer" id="contact">
+    <div class="reveal-up">
+      <span class="eyebrow-tag">04 / INITIATE DIALOGUE</span>
+      <h2 class="footer-cta-title">Создадим продукт<br><em>нового уровня.</em></h2>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
+        <a class="btn-luxury magnetic-btn" href="mailto:mazzask@proton.me" data-cursor="EMAIL">mazzask@proton.me ↗</a>
+        <a class="btn-ghost magnetic-btn" href="https://t.me/wewassup" target="_blank" rel="noopener" data-cursor="TELEGRAM">Telegram: @wewassup ↗</a>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>© <span data-year></span> DENIS MOROZOV — PRODUCT ENGINEER</span>
+      <span>ENGINEERED WITH KINETIC 3D &amp; MARBLE AESTHETICS</span>
+      <a href="#top" style="color:var(--gold-champagne);">НАВЕРХ ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

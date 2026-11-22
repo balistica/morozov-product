@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SWOP — Fintech Exchange | Denis Morozov — Product Engineer</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="marble-veins-bg"></div>
+  <canvas id="webgl-canvas" style="opacity:0.45;"></canvas>
+
+  <header class="nav-header">
+    <a class="brand-mark" href="index.html"><span class="brand-monogram">M</span><span>MOROZOV</span></a>
+    <nav class="nav-links">
+      <a href="index.html#work">← Все кейсы</a>
+      <a href="case-clinia.html">Clinia</a>
+      <a href="case-perchatka.html">Перчатка</a>
+    </nav>
+    <a class="btn-luxury magnetic-btn" href="mailto:mazzask@proton.me">Связаться ↗</a>
+  </header>
+
+  <main class="wrap" style="padding-top:150px;">
+    <section class="reveal-up">
+      <span class="eyebrow-tag">CASE MONOGRAPH 01 // FINTECH PRODUCT ENGINEERING</span>
+      <h1 class="hero-headline" style="font-size:clamp(48px,7.5vw,112px);">SWOP<span class="italic-gold">.</span><br>Exchange Architecture.</h1>
+      <p class="hero-manifesto" style="margin-top:28px;">
+        Как сократить пользовательский путь криптовалютного обмена с 7 до 4 шагов, спроектировать отказоустойчивые финансовые состояния и построить единую дизайн-систему для 8 продуктовых сценариев.
+      </p>
+
+      <div class="hero-telemetry" style="grid-template-columns:repeat(4,1fr);margin-top:44px;">
+        <div class="telemetry-item"><small>КОМПАНИЯ</small><span>MetaLamp</span></div>
+        <div class="telemetry-item"><small>РОЛЬ</small><span>Product Engineer</span></div>
+        <div class="telemetry-item"><small>ПЕРИОД</small><span>2025 — Настоящее время</span></div>
+        <div class="telemetry-item"><small>МАСШТАБ</small><span>21 группа компонентов</span></div>
+      </div>
+    </section>
+
+    <section class="atelier-section reveal-up" style="padding-top:70px;">
+      <div class="case-monolith featured tilt-card" style="grid-template-columns:1fr 1fr;">
+        <div class="card-glare"></div>
+        <div>
+          <span class="eyebrow-tag">INTERACTIVE EXCHANGE CORE</span>
+          <h2 class="section-title-serif" style="font-size:clamp(34px,4vw,54px);">Прозрачность <em>каждого шага</em></h2>
+          <p class="case-desc" style="margin-top:18px;">
+            В финансовых продуктах неопределённость стоит доверия. Я перестроил сценарий так, чтобы курс, комиссии, верификация карты и восстановление после сбоя работали как единый предсказуемый механизм без потери введённых данных.
+          </p>
+        </div>
+        <div class="vp-widget-glass" style="margin:0;">
+          <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:11px;color:#c2f477;margin-bottom:16px;">
+            <span>SWOP PROTOCOL v2.4</span>
+            <span>● ENCRYPTED SESSION</span>
+          </div>
+          <div class="vp-row" style="margin-bottom:10px;"><span>Вы отправляете</span><strong>1.00 BTC</strong></div>
+          <div class="vp-row"><span>Вы получаете</span><strong style="color:#c2f477;">84 250 USDT</strong></div>
+          <div class="vp-accent-pill" style="margin-top:16px;">ПОДТВЕРДИТЬ ТРАНЗАКЦИЮ ↗</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="atelier-section reveal-up" style="padding-top:20px;">
+      <div class="bento-matrix">
+        <div class="bento-tile span-4">
+          <span class="bento-num">METRIC 01</span>
+          <h3 style="font-size:48px;color:var(--gold-bright);">7 → 4</h3>
+          <p>Сокращение количества шагов в критическом сценарии обмена криптовалюты.</p>
+        </div>
+        <div class="bento-tile span-4">
+          <span class="bento-num">METRIC 02</span>
+          <h3 style="font-size:48px;color:var(--gold-bright);">21</h3>
+          <p>Группа атомарных компонентов в единой библиотеке SWOP Design System.</p>
+        </div>
+        <div class="bento-tile span-4">
+          <span class="bento-num">METRIC 03</span>
+          <h3 style="font-size:48px;color:var(--gold-bright);">8 Flows</h3>
+          <p>Продуктовых сценариев объединены общими правилами состояний и типографики.</p>
+        </div>
+
+        <div class="bento-tile span-6">
+          <span class="bento-num">UX RESEARCH &amp; VALIDATION</span>
+          <h3>Юзабилити-тестирование (7 сессий)</h3>
+          <p>Совместно с UX-исследователем подготовил сценарии тестирования, провёл наблюдение за прохождением платежей и доработал логику восстановления после ошибок верификации.</p>
+        </div>
+
+        <div class="bento-tile span-6">
+          <span class="bento-num">ATOMIC DESIGN SYSTEM</span>
+          <h3>Масштабируемая архитектура UI</h3>
+          <p>Систематизированы цветовые токены, сетки, состояния инпутов, модальные подтверждения и поддержка пользователя на базе принципов Atomic Design.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-bar" style="margin-bottom:50px;">
+      <a href="index.html">← НА ГЛАВНУЮ</a>
+      <a href="case-clinia.html" style="color:var(--gold-champagne);">СЛЕДУЮЩИЙ КЕЙС: CLINIA →</a>
+    </div>
+  </main>
+</body>
+</html>
